@@ -1,0 +1,12 @@
+debug: true
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: blog
+logging:
+  level:
+    org:
+      springframework:
+        boot:
+          autoconfigure: ERROR
