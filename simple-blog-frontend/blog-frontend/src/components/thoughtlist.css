@@ -1,0 +1,15 @@
+.listRecents {
+    margin-top: 80px;
+    margin-right: 30px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    height: 530px;
+    overflow-y: scroll;
+}
+
+h3 {
+    margin-left: 30px;
+
+
+}
+

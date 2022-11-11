@@ -15,7 +15,6 @@ import java.util.Optional;
 @RequestMapping("/api")
 public class BlogPostController {
 
-    HttpHeaders header = new HttpHeaders();
     final
     BlogPostService service;
 
@@ -27,6 +26,7 @@ public class BlogPostController {
     @PostMapping
     ResponseEntity<BlogPost> createNewPost(@RequestBody BlogPost blogPost) {
         BlogPost newBlogPost = service.add(blogPost);
+        HttpHeaders header = new HttpHeaders();
         header.add("Content-Type", "application/json");
         header.add("Location", "/api");
         ResponseEntity<BlogPost> responseEntity = new ResponseEntity<>(newBlogPost, header, HttpStatus.CREATED);
@@ -36,6 +36,7 @@ public class BlogPostController {
     @GetMapping("/all")
     ResponseEntity<List<BlogPost>> listAllBlogPosts() {
         List<BlogPost> blogPostList = service.getAllPosts();
+        HttpHeaders header = new HttpHeaders();
         header.add("Content-Type", "application/json");
         header.add("Location", "/api/all");
         ResponseEntity<List<BlogPost>> responseEntity = new ResponseEntity<>(blogPostList, header, HttpStatus.OK);
@@ -45,6 +46,7 @@ public class BlogPostController {
     @GetMapping("/{id}")
     ResponseEntity<BlogPost> getPostById(@PathVariable String id) {
         Optional<BlogPost> blogPost = service.getPostById(id);
+        HttpHeaders header = new HttpHeaders();
         header.add("Location", "/api/" + id);
 
         if (blogPost.isPresent()) {
@@ -62,6 +64,7 @@ public class BlogPostController {
         if ( !existingBlogPost.isPresent()) {
             return ResponseEntity.notFound().build();
         }
+        HttpHeaders header = new HttpHeaders();
         header.add("Location", "/api/all/" + id);
         BlogPost editedBlogPost = service.updateBlogPost(blogPost);
         return new ResponseEntity<>(editedBlogPost, header, HttpStatus.OK);

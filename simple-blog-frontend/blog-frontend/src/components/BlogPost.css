@@ -1,0 +1,21 @@
+.recents {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: 50px;
+    margin-left: 10px;
+}
+
+.publishedAt, 
+.title {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    color: black
+}
+
+.publishedAt {
+    font-weight: bold;
+}
+
+
+

@@ -1,0 +1,24 @@
+.inputForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 80px;
+    margin-left: 50px;
+    margin-right: 60px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+
+textarea {
+    resize: none;
+}
+
+.titleOfInput,
+.body {
+    font-weight: bold;
+}
+
+.create {
+    width: 100px;
+}
