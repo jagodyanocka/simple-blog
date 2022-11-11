@@ -11,27 +11,27 @@ Funcionality that only backend has (no time to fix it - gonna improve! :))
 - Can update single blog post (request method: PUT)
 
 
-#Backend: 
+## Backend: 
 - Java 
 - SpringBoot
 - REST api
 
-#Data base:
+## Data base:
 - Mongo DB running locally in Docker 
 
-#Frontend:
+## Frontend:
 - JavaScript
 - React
 - html
 - css
 
-#Tools:
+## Tools:
 - IntelliJ
 - Visual Studio Code
 - Docker
 - Postman (I used for data flow in the backend side)
 
-#Requirements to run this application
+## Requirements to run this application
 
 - Download docker
 - Start mongodb locally in docker: 
