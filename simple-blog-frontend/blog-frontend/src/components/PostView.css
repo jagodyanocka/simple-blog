@@ -12,3 +12,15 @@
     overflow-y: scroll;
 }
 
+.buttoncontainer {
+    position: relative;
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.buttons {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+

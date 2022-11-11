@@ -24,8 +24,13 @@ export default function PostView({deleteThoughtFn, viewThoughtFn, postId}) {
     <div className='postview'>
         <h1>{singleThought.title}</h1>
         <p>{singleThought.body}</p>
-        <button onClick={handleBackButton}>Back</button>
-        <button onClick={handleDeleteButton}>Delete</button>
+        <div className='buttoncontainer'>
+            <div className='buttons' >
+                <button onClick={handleBackButton}>Back</button>
+                <button onClick={handleDeleteButton}>Delete</button>
+            </div>
+        </div>
+        
     </div>
   
    </>

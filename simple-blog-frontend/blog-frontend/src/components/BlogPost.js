@@ -11,7 +11,7 @@ const handleClick = (e) => {
   return (
     <div className='recents'>
         <a className='publishedAt' href='#' onClick={handleClick}>
-            { thoughtObj.publishedAt }
+            {(new Date(Date.parse(thoughtObj.publishedAt))).toDateString()}
         </a>
         <p className='title'>
             { thoughtObj.title }
